@@ -28,14 +28,12 @@
 
 ## 🖼️ Screenshots
 
-### 🐣 Sign Up Page  
-![Sign Up Page](assets/signup.png)
+<p align="center">
+  <img src="assets/signup.png" alt="Sign Up" width="400"/>
+  <img src="assets/login.png" alt="Login" width="400"/>
+  <img src="assets/dashboard.png" alt="Dashboard" width="400"/>
+</p>
 
-### 🔐 Login Page  
-![Login Page](assets/login.png)
-
-### 📒 Dashboard Page  
-![Dashboard](assets/dashboard.png)
 
 
 ---
