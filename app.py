@@ -88,10 +88,16 @@ def login():
 def dashboard():
     conn = get_db()
     cur = conn.cursor()
-    cur.execute("SELECT * FROM notes WHERE user_id = ?", (current_user.id,))
-    notes = [fernet.decrypt(row['note']).decode() for row in cur.fetchall()]
+    cur.execute("SELECT note, created_at FROM notes WHERE user_id = ? ORDER BY created_at DESC", (current_user.id,))
+    
+    # Decrypt each note and pair it with timestamp
+    notes = []
+    for row in cur.fetchall():
+        decrypted_note = fernet.decrypt(row['note']).decode()
+        timestamp = row['created_at']
+        notes.append((decrypted_note, timestamp))
+    
     return render_template("dashboard.html", notes=notes)
-
 @app.route("/add-note", methods=["POST"])
 @login_required
 def add_note():
