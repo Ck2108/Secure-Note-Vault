@@ -97,6 +97,3 @@ Made with 💛 by [Chinmayee Kale](https://github.com/Ck2108)
 
 MIT License – feel free to fork, remix, and star ⭐
 
-````
-
----
