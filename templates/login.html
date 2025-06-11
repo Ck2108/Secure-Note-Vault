@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login 🔐</title>
+  <style>
+    body {
+      background-color: #f9f7ff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+      color: #444;
+    }
+    form {
+      background-color: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid #d5aaff;
+      border-radius: 8px;
+      width: 200px;
+    }
+    button {
+      background-color: #d5aaff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #b68ce0;
+    }
+    .lock {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    a {
+      color: #6a4caf;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="lock">🔐</div>
+  <h2>Welcome Back!</h2>
+  <p>Please log in to unlock your secrets ✨</p>
+
+  <form method="POST">
+    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <p style="margin-top: 20px;">Don't have an account? <a href="/signup">Sign up here</a></p>
+</body>
+</html>
+

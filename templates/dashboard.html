@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Vault 🔐</title>
+  <style>
+    body {
+      background-color: #d6f0ff;
+      font-family: 'Trebuchet MS', sans-serif;
+      padding: 40px;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    textarea {
+      width: 90%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #bbb;
+      resize: vertical;
+    }
+    button {
+      margin-top: 10px;
+      background-color: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1f6696;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: white;
+      margin: 10px auto;
+      max-width: 600px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Welcome, {{ current_user.username }} 👋</h2>
+
+  <form action="/add-note" method="POST">
+    <textarea name="note" rows="4" placeholder="Write your secret thoughts here... 🔒✨" required></textarea><br>
+    <button type="submit">Add Secret Note</button>
+  </form>
+
+  <h3 style="text-align: center;">🔐 Your Secret Notes</h3>
+  <ul>
+    {% for note in notes %}
+      <li>🔒 {{ note }}</li>
+    {% endfor %}
+  </ul>
+
+  <a href="/logout">🚪 Log Out</a>
+</body>
+</html>
+
