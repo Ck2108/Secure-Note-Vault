@@ -28,11 +28,15 @@
 
 ## 🖼️ Screenshots
 
-### 🔐 Login Page
-![Login Page](assets/login-screenshot.png)
+### 🐣 Sign Up Page  
+![Sign Up Page](assets/signup.png)
 
-### 🗂 Dashboard View
-![Dashboard View](assets/dashboard-screenshot.png)
+### 🔐 Login Page  
+![Login Page](assets/login.png)
+
+### 📒 Dashboard Page  
+![Dashboard](assets/dashboard.png)
+
 
 ---
 
